@@ -10,7 +10,7 @@ int get_token(int argc, char *argv[]){
 		usage();
 		exit(1);
 	}
-	int token;
+	int token = 0;
 	int gopt;
 	while((gopt = getopt(argc, argv, "t:h") ) != -1)
 		switch(gopt){

@@ -24,4 +24,4 @@ clean:
 run:
 	@ clear
 	@ echo "Hot Potato MPI"
-	@ mpirun -np 4 ./bin/hotpotato -t 10
+	@ mpirun -np 6 ./bin/hotpotato -t 10

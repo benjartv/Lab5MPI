@@ -47,14 +47,14 @@ int main(int argc, char* argv[]){
 				if (data[START]==0)
 				{
 					srand(time(NULL));
-					r = rand() % token + 1;
+					r = rand() % token;
 					data[TOKEN] = token - r;
 					data[START] = 1; //Nuevo token generado
 					printf("Proceso %i tiene la papa con valor %i\n", myrank, data[TOKEN]);
 				}
 				else{
 					srand(time(NULL));
-					r = rand() % token + 1;
+					r = rand() % token;
 					data[TOKEN] = data[TOKEN] - r;
 					printf("Proceso %i tiene la papa con valor %i", myrank, data[TOKEN]);
 					if (data[TOKEN] < 0) //Revisar si el jugador perdió o sigue en juego
