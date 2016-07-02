@@ -81,15 +81,9 @@ int main(int argc, char* argv[]){
 	}
 	MPI_Barrier(MPI_COMM_WORLD);
 
-	if (myrank == 0) //El proceso 0 recorre el arreglo de jugadores e indica el ganador
-	{
-		for (i = 0; i < nproc; i++)
-		{
-			if (data[i] == 1)
-			{
-				printf("Proceso %i es el ganador\n", i);
-			}
-		}
+	if (data[myrank] == 1) //El proceso ganador indica la victoria
+	{	
+		printf("Proceso %i es el ganador\n", myrank);		
 	}
 	
 	MPI_Finalize();
