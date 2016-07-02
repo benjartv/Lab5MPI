@@ -63,7 +63,6 @@ int main(int argc, char* argv[]){
 						data[myrank] = 0; //El proceso perdió
 						data[START] = 0; //Aviso para generar nuevo token
 						data[PLAYERS] = data[PLAYERS] - 1;
-
 					}
 					else
 						printf("\n");
@@ -88,7 +87,7 @@ int main(int argc, char* argv[]){
 		{
 			if (data[i] == 1)
 			{
-				printf("Proceso %i es el ganador\n", data[i]);
+				printf("Proceso %i es el ganador\n", i);
 			}
 		}
 	}
